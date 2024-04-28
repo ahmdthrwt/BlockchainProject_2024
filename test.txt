@@ -1,0 +1,21 @@
+Test for validity 
+def main():
+    blockchain = Blockchain()
+    database = ["Hello World", "What's up", "Hello", "World"]
+
+
+
+    num = 0
+    for data in database:
+        num += 1
+        Blockchain().mine(Block(data, num))
+
+
+    for block in blockchain.chain:
+        print(block)
+
+        blockchain.chain[2].data = "NEW DATA" 
+
+    
+
+    print(isValidChain(blockchain))
