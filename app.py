@@ -19,7 +19,7 @@ def index():
     """
     This function renders the home page of the application.
     """
-    return "Hello World!"
+    return render_template('index.html')
 if __name__ == '__main__':
     app.secret_key = 'secret123' # secret key for the session 
     app.run(debug=True)
